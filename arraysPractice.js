@@ -431,12 +431,22 @@ and those objects contain properties about the specific person you follow.*/
 objects until you find Tyler's account (use tylermcginnis33@gmail.com to find him).
 Once you find the particular index he's located in, delete him from the array.*/
 
-users = [user1, user2, user];
+users.push(user1, user2, user3);
 
+/*
 for(var i = 0; i < users.length; i++) {
-  if(users[i] === 'tylermcginnis33@gmail.com') {
+  console.log(users[i].email);
+  if(users[i].email === 'tylermcginnis33@gmail.com') {
     users.splice(i, i);
   }
 }
+*/
 
+//OR
+
+users.forEach(function(item,index) {
+  if(item.name === 'Tyler McGinnis') {
+    users.splice(index, 1);
+  }
+});
 // The activity we just did is very much how data works in 'the real world'.
